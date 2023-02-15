@@ -83,7 +83,6 @@ const Table = (props) => {
 
   return (
     <DataTable
-      title="Daftar Mahasiswa"
       columns={columns}
       data={filteredItems}
       defaultSortField="name"

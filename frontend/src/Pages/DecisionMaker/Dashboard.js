@@ -7,7 +7,7 @@ export const Dashboard = () => {
       <Header />
       <div className="lg:container lg:mx-auto mx-2">
         <div className="columns-2 flex mt-4 gap-10">
-          <div className="w-1/3">
+          <div className="md:w-1/3 hidden md:block">
             <SidebarDecisionMaker />
           </div>
           <div className="w-full bg-cyan-500 h-44">asd</div>

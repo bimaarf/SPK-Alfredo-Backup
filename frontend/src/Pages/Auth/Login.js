@@ -20,8 +20,8 @@ export const Login = () => {
             <h1 className="text-center font-bold text-3xl md:text-6xl text-white drop-shadow-lg shadow-black">
               SPK BIDIKMISI UNTAN
             </h1>
-            <div className="bg-white rounded-3xl p-10 shadow-md my-10">
-              <h1 className="text-center text-cyan-900 font-bold md:text-4xl text-2xl">
+            <div className="bg-white rounded-3xl p-10 shadow-md mt-10 space-y-6">
+              <h1 className="text-center text-cyan-500 font-bold md:text-4xl text-2xl">
                 Login
               </h1>
               <div className="mt-2">
@@ -49,7 +49,7 @@ export const Login = () => {
                   type="password"
                   name="password"
                   className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
-                  placeholder="Masukkan Password"
+                  placeholder="Masukkan password"
                   required
                 />
               </div>

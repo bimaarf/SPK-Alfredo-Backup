@@ -20,8 +20,8 @@ export const Register = () => {
             <h1 className="text-center font-bold text-3xl md:text-6xl text-white drop-shadow-lg shadow-black">
               SPK BIDIKMISI UNTAN
             </h1>
-            <div className="bg-white rounded-3xl p-10 shadow-md mt-10 mb-10">
-              <h1 className="text-center text-cyan-900 font-bold md:text-4xl text-2xl">
+            <div className="bg-white rounded-3xl p-10 shadow-md mt-10 space-y-6">
+              <h1 className="text-center text-cyan-500 font-bold md:text-4xl text-2xl">
                 Register
               </h1>
               <div className="mt-2">
@@ -65,7 +65,7 @@ export const Register = () => {
                   type="password"
                   name="password"
                   className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
-                  placeholder="Masukkan Password"
+                  placeholder="Masukkan password"
                   required
                 />
               </div>
@@ -81,13 +81,13 @@ export const Register = () => {
                   type="password"
                   name="password"
                   className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
-                  placeholder="Masukkan Password"
+                  placeholder="Konfirmasi password"
                   required
                 />
               </div>
               <div className="mt-10 text-center">
                 <button className="bg-cyan-500 hover:bg-cyan-600 px-28 hover:px-32 hover:rounded-xl py-2 rounded-md text-xl font-semibold text-white duration-300 ease-in-out">
-                  Login
+                  Register
                 </button>
                 <div className="text-sm mt-2 text-gray-500">
                   <span>Sudah punya akun?</span>

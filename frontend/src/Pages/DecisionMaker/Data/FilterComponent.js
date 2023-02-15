@@ -60,7 +60,7 @@ const FilterComponent = ({ filterText, onFilter, onClear }) => (
       onChange={onFilter}
     />
     <ClearButton onClick={onClear}>
-    <i className="fa fa-trash"></i>
+      <i className="fa fa-trash"></i>
     </ClearButton>
   </>
 );
