@@ -77,7 +77,7 @@ export const Login = ({ setAuthCheck }) => {
               SPK BIDIKMISI UNTAN
             </h1>
             <div className="bg-white rounded-3xl p-10 shadow-md mt-10 space-y-6">
-              <h1 className="text-center text-cyan-500 font-bold md:text-4xl text-2xl">
+              <h1 className="text-center text-yellow-500 font-bold md:text-4xl text-2xl">
                 Login
               </h1>
               <form>
@@ -97,10 +97,10 @@ export const Login = ({ setAuthCheck }) => {
                     className={`${
                       emailValidator === "" &&
                       emailValidator !== "Enter valid email!"
-                        ? "focus:border-cyan-500 "
+                        ? "focus:border-yellow-500 "
                         : "" || emailValidator === "Enter valid email!"
                         ? "bg-red-50 border border-red-400 "
-                        : "focus:border-cyan-500"
+                        : "focus:border-yellow-500"
                     } xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none  focus:border border`}
                     placeholder="Masukkan alamat email"
                     required
@@ -136,7 +136,7 @@ export const Login = ({ setAuthCheck }) => {
                     name="password"
                     onChange={handleChange}
                     value={handleChange.password}
-                    className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
+                    className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
                     placeholder="Masukkan password"
                     required
                   />
@@ -148,7 +148,7 @@ export const Login = ({ setAuthCheck }) => {
                     onClick={handleSubmit}
                     className={`${
                       loadSubmit && "px-32"
-                    } bg-cyan-500 hover:bg-cyan-600 px-28 hover:px-32 hover:rounded-xl py-2 rounded-md text-xl font-semibold text-white duration-300 ease-in-out`}
+                    } bg-yellow-500 hover:bg-yellow-600 px-28 hover:px-32 hover:rounded-xl py-2 rounded-md text-xl font-semibold text-white duration-300 ease-in-out`}
                   >
                     {loadSubmit && (
                       <svg

@@ -1,16 +1,15 @@
 import React from "react";
 import { Header } from "../../Components/Header";
 import { SidebarDecisionMaker } from "../../Components/SidebarDecisionMaker";
+import "../../App.css";
 export const Dashboard = () => {
   return (
     <>
       <Header />
-      <div className="lg:container lg:mx-auto mx-2">
+      <div className="container-custome">
         <div className="columns-2 flex mt-4 gap-10">
-          <div className="md:w-1/3 hidden md:block">
-            <SidebarDecisionMaker />
-          </div>
-          <div className="w-full bg-cyan-500 h-44">asd</div>
+          <SidebarDecisionMaker />
+          <div style={{ width: "100vh" }}></div>
         </div>
       </div>
     </>

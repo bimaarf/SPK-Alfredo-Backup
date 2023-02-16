@@ -21,7 +21,7 @@ export const Register = () => {
               SPK BIDIKMISI UNTAN
             </h1>
             <div className="bg-white rounded-3xl p-10 shadow-md mt-10 space-y-6">
-              <h1 className="text-center text-cyan-500 font-bold md:text-4xl text-2xl">
+              <h1 className="text-center text-yellow-500 font-bold md:text-4xl text-2xl">
                 Register
               </h1>
               <div className="mt-2">
@@ -35,7 +35,7 @@ export const Register = () => {
                   id="username"
                   type="text"
                   name="username"
-                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
+                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
                   placeholder="Masukkan username"
                   required
                 />
@@ -48,7 +48,7 @@ export const Register = () => {
                   id="email"
                   type="email"
                   name="email"
-                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
+                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
                   placeholder="Masukkan alamat email"
                   required
                 />
@@ -64,7 +64,7 @@ export const Register = () => {
                   id="password"
                   type="password"
                   name="password"
-                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
+                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
                   placeholder="Masukkan password"
                   required
                 />
@@ -80,13 +80,13 @@ export const Register = () => {
                   id="password"
                   type="password"
                   name="password"
-                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
+                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
                   placeholder="Konfirmasi password"
                   required
                 />
               </div>
               <div className="mt-10 text-center">
-                <button className="bg-cyan-500 hover:bg-cyan-600 px-28 hover:px-32 hover:rounded-xl py-2 rounded-md text-xl font-semibold text-white duration-300 ease-in-out">
+                <button className="bg-yellow-500 hover:bg-yellow-600 px-28 hover:px-32 hover:rounded-xl py-2 rounded-md text-xl font-semibold text-white duration-300 ease-in-out">
                   Register
                 </button>
                 <div className="text-sm mt-2 text-gray-500">

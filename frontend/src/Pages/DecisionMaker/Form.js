@@ -2,24 +2,23 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../../Components/Header";
 import { SidebarDecisionMaker } from "../../Components/SidebarDecisionMaker";
+import "../../App.css";
 export const Form = () => {
   const navRedirect = useNavigate();
   return (
     <>
       <Header />
-      <div className="lg:container lg:mx-auto mx-2">
+      <div className="container-custome">
         <div className="columns-2 flex mt-4 gap-10">
-          <div className="md:w-1/3 hidden md:block">
-            <SidebarDecisionMaker />
-          </div>
-          <div className="w-full">
+          <SidebarDecisionMaker />
+          <div style={{ width: "100vh" }}>
             <div className="flex justify-between items-baseline">
               <h1 className="text-gray-700 font-semibold text-xl md:text-2xl">
                 Form Mahasiswa
               </h1>
               <button
                 onClick={() => navRedirect("/decision-maker/mahasiswa")}
-                className="mb-4 float-right text-sm px-4 py-1 md:text-xl md:px-8 md:py-2 bg-yellow-500 hover:bg-yellow-600 duration-300 ease-in-out rounded text-white"
+                className="mb-4 float-right text-sm px-4 py-1 md:text-md md:px-8 md:py-2 bg-yellow-500 hover:bg-yellow-600 duration-300 ease-in-out rounded text-white"
               >
                 Kembali
               </button>
@@ -37,7 +36,7 @@ export const Form = () => {
                   id="nama_mahasiswa"
                   type="email"
                   name="nama_mahasiswa"
-                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
+                  className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
                   placeholder="Nama mahasiswa"
                   required
                 />
@@ -97,7 +96,7 @@ export const Form = () => {
                     id="tempat_lahir"
                     type="text"
                     name="tempat_lahir"
-                    className=" xappearance-none w-1/2 rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
+                    className=" xappearance-none w-1/2 rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
                     placeholder="Tempat Lahir"
                     required
                   />
@@ -105,48 +104,51 @@ export const Form = () => {
                     id="nama_mahasiswa"
                     type="date"
                     name="nama_mahasiswa"
-                    className=" xappearance-none w-1/2 rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
+                    className=" xappearance-none w-1/2 rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
                     placeholder="Masukkan nama mahasiswa"
                     required
                   />
                 </div>
               </div>
-            <div className="mt-2">
-              <label htmlFor="no_telp" className="text-gray-700 font-semibold">
-                No. Handphone
-              </label>
-              <input
-                id="no_telp"
-                type="number"
-                name="no_telp"
-                className=" xappearance-none w-full rounded py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
-                placeholder="e.g. 628XXXX"
-                required
-              />
-            </div>
-            <div className="mt-2">
-              <label
-                htmlFor="nilai_raport"
-                className="text-gray-700 font-semibold"
-              >
-                Nilai Raport
-              </label>
-              <input
-                id="nilai_raport"
-                type="number"
-                name="nilai_raport"
-                className=" xappearance-none w-full rounded py-3 px-3 text-gray-700 focus:outline-none focus:border-cyan-500 focus:border border"
-                placeholder="e.g. 89.39"
-                required
-              />
-            </div>
-            <div className="float-right">
-              <button className="px-20 py-2 hover:px-24 bg-cyan-500 hover:bg-cyan-600 duration-300 ease-in-out rounded text-white">
-                Kirim
-              </button>
+              <div className="mt-2">
+                <label
+                  htmlFor="no_telp"
+                  className="text-gray-700 font-semibold"
+                >
+                  No. Handphone
+                </label>
+                <input
+                  id="no_telp"
+                  type="number"
+                  name="no_telp"
+                  className=" xappearance-none w-full rounded py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
+                  placeholder="e.g. 628XXXX"
+                  required
+                />
+              </div>
+              <div className="mt-2">
+                <label
+                  htmlFor="nilai_raport"
+                  className="text-gray-700 font-semibold"
+                >
+                  Nilai Raport
+                </label>
+                <input
+                  id="nilai_raport"
+                  type="number"
+                  name="nilai_raport"
+                  className=" xappearance-none w-full rounded py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
+                  placeholder="e.g. 89.39"
+                  required
+                />
+              </div>
+              <div className="float-right">
+                <button className="px-20 py-2 hover:px-24 bg-yellow-500 hover:bg-yellow-600 duration-300 ease-in-out rounded text-white">
+                  Kirim
+                </button>
+              </div>
             </div>
           </div>
-            </div>
         </div>
       </div>
     </>
