@@ -11,10 +11,10 @@ export const Mahasiswa = () => {
   return (
     <>
       <Header />
-      <div className="container-custome">
-        <div className="columns-2 flex mt-4 gap-10">
+      <div className="lg:container lg:mx-auto pb-10 md:pt-10">
+        <div className="md:flex md:columns-2 md:gap-10">
           <SidebarDecisionMaker />
-          <div className="w-full md:w-0" style={{ width: "100vh" }}>
+          <div className="bg-white rounded-xl w-full p-3 md:p-10 ">
             <div className="flex justify-between items-baseline">
               <h1 className="text-gray-700 font-semibold text-xl md:text-2xl">
                 Data Mahasiswa
@@ -26,6 +26,7 @@ export const Mahasiswa = () => {
                 Tambah Mahasiswa
               </button>
             </div>
+            <div className="container-custome"></div>
             <Table data={data} click={clickhandler} />
           </div>
         </div>

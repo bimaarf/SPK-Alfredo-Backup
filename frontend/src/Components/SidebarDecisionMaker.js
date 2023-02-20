@@ -5,7 +5,7 @@ export const SidebarDecisionMaker = () => {
   const navRedirect = useNavigate();
   return (
     <>
-      <div className=" hidden md:block" style={{ width: "45vh" }}>
+      <div className="bg-white w-2/4 h-2/4 rounded-xl hidden md:block md:pb-10">
         <div className="bg-white rounded-3xl p-10" style={{ height: "80vh" }}>
           <div className="flex justify-start items-center gap-3 border-b pb-4">
             <i className="fa fa-user-circle text-5xl text-yellow-500"></i>

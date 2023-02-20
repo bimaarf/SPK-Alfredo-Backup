@@ -8,10 +8,10 @@ export const Form = () => {
   return (
     <>
       <Header />
-      <div className="container-custome">
-        <div className="columns-2 flex mt-4 gap-10">
+      <div className="md:container md:mx-auto pb-10 md:pt-10">
+        <div className="md:flex md:columns-2 md:gap-10">
           <SidebarDecisionMaker />
-          <div style={{ width: "100vh" }}>
+          <div className="bg-white rounded-xl w-full p-3 md:p-10 ">
             <div className="flex justify-between items-baseline">
               <h1 className="text-gray-700 font-semibold text-xl md:text-2xl">
                 Form Mahasiswa
@@ -24,7 +24,7 @@ export const Form = () => {
               </button>
             </div>
             {/* Form */}
-            <div className="bg-white p-10 mt-4 space-y-4 pb-20">
+            <div className="space-y-4">
               <div className="mt-2">
                 <label
                   htmlFor="nama_mahasiswa"
