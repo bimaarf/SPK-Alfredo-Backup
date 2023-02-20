@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('kriteria_id');
             $table->foreign('kriteria_id')->references('id')->on('tb_kriteria');
-            $table->string('keterangan');
-            $table->string('bobot');
+            $table->string('nama_sub_kriteria');
+            $table->string('nilai');
             $table->timestamps();
         });
     }

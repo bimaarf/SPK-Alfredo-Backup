@@ -1,20 +1,25 @@
+import axios from "axios";
 import React, { useState } from "react";
+import { Chart } from "react-google-charts";
 import { Header } from "../../Components/Header";
 import { SidebarDecisionMaker } from "../../Components/SidebarDecisionMaker";
-import { Chart } from "react-google-charts";
-export const data = [
-  ["Task", "Hours per Day"],
-  ["Total Penerimaan Bidikmisi UNTAN", 6],
-  ["Total Non Bidikmisi UNTAN", 3],
-];
-
-export const options = {
-  title: "Total Mahasiswa Untan",
-};
+import { FormKriteria } from "./Modal/FormKriteria";
+import { FormSubKriteria } from "./Modal/FormSubKriteria";
 export const Dashboard = () => {
+  const [getData, setData] = useState(13);
+  const data = [
+    ["Task", "Hours per Day"],
+    ["Total Penerimaan Bidikmisi UNTAN", getData],
+    ["Total Non Bidikmisi UNTAN", 3],
+  ];
+  const options = {
+    title: "Total Mahasiswa Untan",
+  };
   return (
     <>
       <Header />
+      <FormKriteria />
+      <FormSubKriteria />
       <div className="md:container md:mx-auto pb-10 md:pt-10">
         <div className="md:flex md:columns-2 md:gap-10">
           <SidebarDecisionMaker />
@@ -36,18 +41,24 @@ export const Dashboard = () => {
               </div>
               <div className="md:w-2/3">
                 <div className="md:grid md:grid-cols-2 grid-cols-2 gap-4">
-                  <div className="bg-cyan-600 p-5 mt-2 md:mt-0 rounded-md flex items-center justify-between hover:-mt-2 hover:mb-2 hover:bg-cyan-700 hover:shadow-xl shadow-black duration-500 ease-in-out cursor-pointer">
+                  <label
+                    htmlFor="form-kriteria"
+                    className="bg-cyan-600 p-5 mt-2 md:mt-0 rounded-md flex items-center justify-between hover:-mt-2 hover:mb-2 hover:bg-cyan-700 hover:shadow-xl shadow-black duration-500 ease-in-out cursor-pointer"
+                  >
                     <div className="flex justify-start items-center gap-2">
                       <i className="text-white fa fa-file-text bg-white bg-opacity-20 p-2 rounded"></i>
                       <h1 className="text-white text-md">Data Kriteria</h1>
                     </div>
-                  </div>
-                  <div className="bg-cyan-600 p-5 mt-2 md:mt-0 rounded-md flex items-center justify-between hover:-mt-2 hover:mb-2 hover:bg-cyan-700 hover:shadow-xl shadow-black duration-500 ease-in-out cursor-pointer">
+                  </label>
+                  <label
+                    htmlFor="form-sub-kriteria"
+                    className="bg-cyan-600 p-5 mt-2 md:mt-0 rounded-md flex items-center justify-between hover:-mt-2 hover:mb-2 hover:bg-cyan-700 hover:shadow-xl shadow-black duration-500 ease-in-out cursor-pointer"
+                  >
                     <div className="flex justify-start items-center gap-2">
                       <i className="text-white fa fa-file-text bg-white bg-opacity-20 p-2 rounded"></i>
                       <h1 className="text-white text-md">Data Sub Kriteria</h1>
                     </div>
-                  </div>
+                  </label>
                   <div className="bg-cyan-600 p-5 mt-2 md:mt-0 rounded-md flex items-center justify-between hover:-mt-2 hover:mb-2 hover:bg-cyan-700 hover:shadow-xl shadow-black duration-500 ease-in-out cursor-pointer">
                     <div className="flex justify-start items-center gap-2">
                       <i className="text-white fa fa-file-text bg-white bg-opacity-20 p-2 rounded"></i>

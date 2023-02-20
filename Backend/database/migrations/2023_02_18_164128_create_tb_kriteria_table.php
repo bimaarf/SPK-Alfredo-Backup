@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::create('tb_kriteria', function (Blueprint $table) {
             $table->id();
             $table->string('nama_kriteria');
+            $table->string('kode_kriteria');
+            $table->string('bobot');
+            $table->string('tipe_kriteria');
             $table->timestamps();
         });
     }
