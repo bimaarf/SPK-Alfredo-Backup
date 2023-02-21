@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\KriteriaController;
 use App\Http\Controllers\SubKriteriaController;
@@ -24,3 +25,5 @@ Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::post('kriteria/store', [KriteriaController::class, 'store']);
 Route::post('sub-kriteria/store', [SubKriteriaController::class, 'store']);
+
+Route::get('data-dashboard/view', [AdminController::class, 'view']);
