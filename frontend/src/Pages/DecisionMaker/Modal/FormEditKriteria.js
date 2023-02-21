@@ -1,13 +1,17 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-export const FormKriteria = ({ getDashboard }) => {
+export const FormEditKriteria = ({
+  setIsActive,
+  dataSelector,
+  getDashboard,
+}) => {
   const [loadSubmit, setLoadSubmit] = useState(false);
   const [formInput, setFormInput] = useState({
-    nama_kriteria: "",
-    kode_kriteria: "",
-    bobot: "",
-    tipe_kriteria: "",
+    nama_kriteria: dataSelector.nama_kriteria,
+    kode_kriteria: dataSelector.kode_kriteria,
+    bobot: dataSelector.bobot,
+    tipe_kriteria: dataSelector.tipe_kriteria,
   });
   const handleChange = (e) => {
     e.persist();
@@ -23,10 +27,10 @@ export const FormKriteria = ({ getDashboard }) => {
       tipe_kriteria: formInput.tipe_kriteria,
     };
     await axios.get("sanctum/csrf-cookie").then((res) => {
-      axios.post(`api/kriteria/store`, data).then(
+      axios.post(`api/kriteria/edit/` + dataSelector.id, data).then(
         (res) => {
-          document.getElementById("form-kriteria").click();
           getDashboard();
+          document.getElementById("form-kriteria").click();
           if (res.data.message === "Update!")
             return toast.success("Berhasil diubah");
           if (res.data.message === "Added!")
@@ -43,6 +47,17 @@ export const FormKriteria = ({ getDashboard }) => {
   };
   return (
     <>
+      <div
+        onClick={() => setIsActive("Data")}
+        className=" rounded-xl w-full transition-all py-4 duration-300 ease-in-out cursor-pointer"
+      >
+        <div className="flex items-baseline justify-between">
+          <h1 className="font-semibold text-sm md:text-md text-gray-600">
+            <i className="fa fa-arrow-left text-sky-500 font-normal mr-2"></i>
+            Kembali
+          </h1>
+        </div>
+      </div>
       <form>
         <div className="mt-2">
           <label
@@ -53,6 +68,7 @@ export const FormKriteria = ({ getDashboard }) => {
           </label>
           <input
             onChange={handleChange}
+            value={formInput.nama_kriteria}
             id="nama_kriteria"
             type="text"
             name="nama_kriteria"
@@ -70,6 +86,7 @@ export const FormKriteria = ({ getDashboard }) => {
           </label>
           <select
             onChange={handleChange}
+            defaultValue={formInput.kode_kriteria}
             name="kode_kriteria"
             id="kode_kriteria"
             className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
@@ -88,6 +105,7 @@ export const FormKriteria = ({ getDashboard }) => {
           </label>
           <input
             onChange={handleChange}
+            value={formInput.bobot}
             id="bobot"
             type="number"
             name="bobot"
@@ -107,6 +125,7 @@ export const FormKriteria = ({ getDashboard }) => {
             onChange={handleChange}
             name="tipe_kriteria"
             id="tipe_kriteria"
+            defaultValue={formInput.tipe_kriteria}
             className=" xappearance-none rounded w-full py-3 px-3 text-gray-700 focus:outline-none focus:border-yellow-500 focus:border border"
           >
             <option value="">-- Pilih --</option>
@@ -146,7 +165,7 @@ export const FormKriteria = ({ getDashboard }) => {
                 />
               </svg>
             )}
-            Simpan
+            Edit
           </button>
         </div>
       </form>

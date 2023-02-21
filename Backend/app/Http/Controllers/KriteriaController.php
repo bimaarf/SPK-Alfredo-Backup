@@ -10,19 +10,6 @@ class KriteriaController extends Controller
 {
     public function store(Request $request)
     {
-        $kriteria = Kriteria::all();
-        // if (count($kriteria) > 0) {
-        //     $_kriteria = Kriteria::first();
-        //     $_kriteria->nama_kriteria = $request->nama_kriteria;
-        //     $_kriteria->kode_kriteria = $request->kode_kriteria;
-        //     $_kriteria->bobot = $request->bobot;
-        //     $_kriteria->tipe_kriteria = $request->tipe_kriteria;
-        //     $_kriteria->update();
-        //     return response()->json([
-        //         'status' => 200,
-        //         'message' => 'Update!',
-        //     ]);
-        // }
         $_kriteria = new Kriteria();
         $_kriteria->nama_kriteria = $request->nama_kriteria;
         $_kriteria->kode_kriteria = $request->kode_kriteria;
@@ -32,6 +19,19 @@ class KriteriaController extends Controller
         return response()->json([
             'status' => 200,
             'message' => 'Added!',
+        ]);
+    }
+    public function edit(Request $request, $id)
+    {
+        $_kriteria = Kriteria::find($id);
+        $_kriteria->nama_kriteria = $request->nama_kriteria;
+        $_kriteria->kode_kriteria = $request->kode_kriteria;
+        $_kriteria->bobot = $request->bobot;
+        $_kriteria->tipe_kriteria = $request->tipe_kriteria;
+        $_kriteria->update();
+        return response()->json([
+            'status' => 200,
+            'message' => 'Update!',
         ]);
     }
 }

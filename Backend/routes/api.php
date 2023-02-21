@@ -24,6 +24,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::post('kriteria/store', [KriteriaController::class, 'store']);
+Route::post('kriteria/edit/{id}', [KriteriaController::class, 'edit']);
 Route::post('sub-kriteria/store', [SubKriteriaController::class, 'store']);
 
 Route::get('data-dashboard/view', [AdminController::class, 'view']);
