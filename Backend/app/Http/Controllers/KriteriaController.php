@@ -34,4 +34,13 @@ class KriteriaController extends Controller
             'message' => 'Update!',
         ]);
     }
+    public function delete($id)
+    {
+        $_kriteria = Kriteria::find($id);
+        $_kriteria->delete();
+        return response()->json([
+            'status' => 200,
+            'message' => 'Update!',
+        ]);
+    }
 }
