@@ -4,7 +4,6 @@ import { FormEditKriteria } from "./FormEditKriteria";
 export const DataKriteria = ({ getKriteria, getDashboard }) => {
   const [isActive, setIsActive] = useState("Data");
   const [dataSelector, setDataSelector] = useState();
-  const handleButton = () => {};
   return (
     <>
       {isActive === "Data" ? (
@@ -19,7 +18,7 @@ export const DataKriteria = ({ getKriteria, getDashboard }) => {
               className="w-full hover:ml-2 hover:-mr-2 duration-300 transition-all ease-in-out bg-white mt-4 px-4 h-20 rounded-lg flex justify-between items-center"
             >
               <div className="text-left font-semibold">
-                <h1 className="text-gray-600 font-semibold text-md md:text-xl uppercase">
+                <h1 className="text-gray-600 font-semibold text-md md:text-xl">
                   {item.nama_kriteria}
                 </h1>
                 <span className="text-xs md:text-sm text-cyan-600 mr-1">

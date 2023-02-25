@@ -80,6 +80,8 @@ export const FormKriteria = ({ getDashboard }) => {
             <option value="C3">C3</option>
             <option value="C4">C4</option>
             <option value="C5">C5</option>
+            <option value="C5">C6</option>
+            <option value="C5">C7</option>
           </select>
         </div>
         <div className="mt-2">
