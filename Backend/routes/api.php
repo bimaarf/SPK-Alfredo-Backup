@@ -23,9 +23,11 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
-Route::post('kriteria/store', [KriteriaController::class, 'store']);
-Route::post('kriteria/edit/{id}', [KriteriaController::class, 'edit']);
-Route::post('kriteria/delete/{id}', [KriteriaController::class, 'delete']);
-Route::post('sub-kriteria/store', [SubKriteriaController::class, 'store']);
-
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::post('kriteria/store', [KriteriaController::class, 'store']);
+    Route::post('kriteria/edit/{id}', [KriteriaController::class, 'edit']);
+    Route::post('kriteria/delete/{id}', [KriteriaController::class, 'delete']);
+    Route::post('sub-kriteria/store', [SubKriteriaController::class, 'store']);
+    Route::post('sub-kriteria/update/{id}', [SubKriteriaController::class, 'update']);
+});
 Route::get('data-dashboard/view', [AdminController::class, 'view']);

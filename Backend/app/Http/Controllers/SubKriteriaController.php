@@ -23,4 +23,15 @@ class SubKriteriaController extends Controller
             'message' => 'Added!',
         ]);
     }
+    public function update(Request $request, $id)
+    {
+        $_sub = SubKriteria::find($id);
+        $_sub->nama_sub_kriteria = $request->nama_sub_kriteria;
+        $_sub->nilai = $request->nilai;
+        $_sub->update();
+        return response()->json([
+            'status' => 200,
+            'message' => 'Updated!',
+        ]);
+    }
 }

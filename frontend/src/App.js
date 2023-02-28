@@ -10,6 +10,7 @@ import { Mahasiswa } from "./Pages/DecisionMaker/Mahasiswa";
 import { Home } from "./Pages/Home";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { SubKriteria } from "./Pages/DecisionMaker/SubKriteria";
 axios.defaults.baseURL = process.env.REACT_APP_API;
 axios.defaults.headers.post["Accept"] = "application/json";
 axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
@@ -40,6 +41,10 @@ function App() {
           />
           <Route path="/register" element={<Register />} />
           <Route path="/decision-maker/dashboard" element={<Dashboard />} />
+          <Route
+            path="/decision-maker/sub-kriteria"
+            element={<SubKriteria />}
+          />
           <Route path="/decision-maker/mahasiswa" element={<Mahasiswa />} />
           <Route path="/decision-maker/mahasiswa/form" element={<Form />} />
         </Routes>

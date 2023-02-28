@@ -25,6 +25,17 @@ export const SidebarDecisionMaker = () => {
             <h1 className="font-normal">Dashboard</h1>
           </div>
           <div
+            onClick={() => navRedirect("/decision-maker/sub-kriteria")}
+            className={`${
+              location.pathname === "/decision-maker/sub-kriteria"
+                ? "bg-yellow-500 text-white"
+                : "hover:bg-yellow-500 text-gray-700 hover:text-white"
+            } flex gap-3 p-3 cursor-pointer text-xl  duration-200 ease-in-out rounded-xl mt-4 justify-start items-center`}
+          >
+            <i className="fa fa-file-text"></i>
+            <h1 className="font-normal">Sub Kriteria</h1>
+          </div>
+          <div
             onClick={() => navRedirect("/decision-maker/mahasiswa")}
             className={`${
               location.pathname.split("/")[2] === "mahasiswa"
@@ -33,11 +44,11 @@ export const SidebarDecisionMaker = () => {
             } flex gap-3 p-3 cursor-pointer text-xl  duration-200 ease-in-out rounded-xl mt-4 justify-start items-center`}
           >
             <i className="fa fa-users -ml-1"></i>
-            <h1 className="font-normal -ml-1">Mahasiswa</h1>
+            <h1 className="font-normal ">Mahasiswa</h1>
           </div>
           <div className="flex gap-3 p-3 cursor-pointer text-xl hover:bg-yellow-500 text-gray-700 hover:text-white duration-200 ease-in-out rounded-xl mt-4 justify-start items-center">
             <i className="fa fa-paste -ml-1"></i>
-            <h1 className="font-normal -ml-1">SPK</h1>
+            <h1 className="font-normal">SPK</h1>
           </div>
 
           <div className="flex gap-3 p-3 cursor-pointer text-xl mt-40 bg-red-500 hover:bg-red-600 text-white hover:text-white duration-200 ease-in-out rounded-xl justify-start items-center">

@@ -54,6 +54,7 @@ export const Login = ({ setAuthCheck }) => {
         if (res.data.status === 102) return toast.error("Akun belum terdaftar");
         toast.success("Berhasil Login");
         setCookie("auth_token", res.data.token, 30);
+        localStorage.setItem("auth_token", res.data.token);
         setAuthCheck(true);
         navRedirect("/decision-maker/dashboard");
       });

@@ -31,7 +31,7 @@ class KriteriaController extends Controller
         $_kriteria->update();
         return response()->json([
             'status' => 200,
-            'message' => 'Update!',
+            'message' => 'Updated!',
         ]);
     }
     public function delete($id)
